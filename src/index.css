@@ -1,10 +1,9 @@
+@import-normalize;
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+ box-sizing: border-box;
+ background: rgb(16,45,45);
+ background: linear-gradient(90deg, rgba(16,45,45,1) 0%, rgba(38,139,139,1) 49%, rgba(56,145,168,1) 100%)
 }
 
 code {
