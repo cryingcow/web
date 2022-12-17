@@ -1,16 +1,19 @@
-import React from 'react';
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import './styles.scss';
+import MyDatePicker from '../../MyDatePicker';
+
 Info.propTypes = {
     
 };
 
 function Info(props) {
+    const {list} = props;
     return (
         <div className='margin'>
             <table>
                 <tr>
-                    <th>Ngày giờ</th>
+                    <th>Ngày</th>
                     <th>Thời gian</th>
                     <th>Id</th>
                     <th>Họ</th>
@@ -18,24 +21,17 @@ function Info(props) {
                     <th>Sđt</th>
                     <th>Địa chỉ</th>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                </tr>
+            
+            {list.map((list , index) => <tr key={index} >
+                <td>{list.date}</td>
+                <td>{list.time}</td>
+                <td>{list.teacherId}</td>
+                <td>{list.firstName}</td>
+                <td>{list.lastName}</td>
+                <td>{list.phoneNumber}</td>
+                <td>{list.address}</td>
+            </tr>) 
+            } 
             </table>
         </div>
     );
